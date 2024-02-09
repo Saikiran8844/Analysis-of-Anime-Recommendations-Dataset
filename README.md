@@ -1,6 +1,6 @@
 # Analysis of Anime Recommendations Dataset
 
-Ilcome to the Analysis of Anime Recommendations Dataset project! In this repository, I delve into a real-world dataset sourced from Medium to explore user feedback and ratings for anime. Our goal is to uncover valuable insights using Python and MySQL, ultimately providing a comprehensive analysis of the dataset.
+Welcome to the Analysis of Anime Recommendations Dataset project! In this repository, I delve into a real-world dataset sourced from Medium to explore user feedback and ratings for anime. Our goal is to uncover valuable insights using Python and MySQL, ultimately providing a comprehensive analysis of the dataset.
 
 ## Dataset Overview
 
