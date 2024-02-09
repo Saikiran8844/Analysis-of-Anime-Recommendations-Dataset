@@ -18,7 +18,7 @@ ALTER TABLE anime_revies RENAME TO  anime_reviews;
 
 SET GLOBAL local_infile=1;
 
-LOAD DATA Local INFILE 'C:\Users\s0132100\Desktop\My Computer\Projects\anime_review\anime.csv'
+LOAD DATA Local INFILE 'path'
 INTO TABLE anime_reviews
 IGNORE 1 ROWS;
 

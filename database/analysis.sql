@@ -10,7 +10,7 @@ FROM anime_reviews;
 SELECT 
 	name, rating,episodes
 FROM
-    anime
+    anime_reviews
 ORDER BY
     rating DESC
 limit 10;
@@ -18,9 +18,9 @@ limit 10;
 -- 3.  top 10 anime movie with user ratings
 SELECT
 name, type, episodes, user_rating
-FROM anime
+FROM anime_reviews
 WHERE episodes > 1 and type= 'Movie'
-ORDER BY score DESC
+ORDER BY rating DESC
 limit 10;
 
 
@@ -28,7 +28,7 @@ limit 10;
 SELECT 
    name, type, episodes, user_rating,count
 FROM
-    anime
+    anime_reviews
 WHERE
     episodes > 1
 ORDER BY
@@ -36,81 +36,86 @@ ORDER BY
     count asc
     limit 10;
 
--- 5. the top 10 popular anime titles with a single episode and non-zero scores
-SELECT TOP 10
-    title, popularity, score, episodes
+-- 5. the top 10 popular anime titles with a single episode and non-zero ratings
+SELECT 
+    name, members,rating, episodes, user_rating
 FROM
-    anime
+    anime_reviews
 WHERE
     episodes = 1
-    AND score <> 0
+    AND rating <> 0
 ORDER BY
-    popularity DESC;
+    popularity DESC
+    limit 10;
 
 
--- 7.the top 10 popular anime titles with multiple episodes and non-zero scores
-SELECT TOP 10
-    title, popularity, score, episodes
+-- 7.the top 10 popular anime titles with multiple episodes and non-zero ratings
+SELECT 
+    name, popularity, rating, episodes
 FROM
-    anime
+    anime_reviews
 WHERE
     episodes > 1
-    AND score <> 0
+    AND rating <> 0
 ORDER BY
-    popularity DESC;
+    popularity DESC
+    limit 10;
 
 
 
 -- 8. 
-SELECT TOP 10
-    title, score, episodes
+SELECT
+    name, rating, episodes
 FROM
-    anime
+    anime_reviews
 WHERE
     episodes = 0
 ORDER BY
-    score DESC;
+    rating DESC
+    limit 10;
 
 
 -- 9. the top 10 comedy anime titles (excluding 1-episode shows)
-SELECT TOP 10
-    title, score, episodes, genres
+SELECT 
+    name, rating, episodes, genres
 FROM
-    anime
+    anime_reviews
 WHERE
     episodes <> 1
     AND genres LIKE '%Comedy%'
 ORDER BY
-    score DESC;
+    rating DESC
+    limit 10;
 
--- 10. the anime title with the highest score 
+-- 10. the anime name with the highest rating 
 SELECT
-    title,
-    score AS top_score
+    name,
+    user_rating AS top_rating
 FROM
-    anime
+    anime_reviews
 WHERE
-    score = (SELECT MAX(score) FROM anime);
+    user_rating = (SELECT MAX(user_rating) FROM anime_reviews);
 
 
--- 11. the anime title with the lowest non-zero score
+-- 11. the anime name with the lowest non-zero rating
 SELECT
-    title,
-    score AS lowest_score
+    name,
+    user_rating AS lowest_rating
 FROM
-    anime
+    anime_reviews
 WHERE
-    score > 0 AND score = (SELECT MIN(score) FROM anime WHERE score > 0);
+    user_rating > 0 AND user_rating = (SELECT MIN(user_rating) FROM anime_reviews WHERE user_rating > 0);
 
 -- 12. he top 10 episode counts with the most anime titles
-SELECT TOP 10
+SELECT 
     episodes,
     COUNT(*) AS no_of_animes
 FROM
-    anime
+    anime_reviews
 WHERE
     episodes > 1
 GROUP BY
     episodes
 ORDER BY
-    no_of_animes DESC;
+    no_of_animes DESC
+    limit 10;
