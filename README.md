@@ -1,6 +1,6 @@
 # Analysis of Anime Recommendations Dataset
 
-Welcome to the Analysis of Anime Recommendations Dataset project! In this repository, we delve into a real-world dataset sourced from Medium to explore user feedback and ratings for anime. Our goal is to uncover valuable insights using Python and MySQL, ultimately providing a comprehensive analysis of the dataset.
+Ilcome to the Analysis of Anime Recommendations Dataset project! In this repository, I delve into a real-world dataset sourced from Medium to explore user feedback and ratings for anime. Our goal is to uncover valuable insights using Python and MySQL, ultimately providing a comprehensive analysis of the dataset.
 
 ## Dataset Overview
 
@@ -13,21 +13,21 @@ The dataset comprises two primary CSV files: `anime.csv` and `rating.csv`. Here'
 
 ### Data Cleaning and Organization
 
-We kick off the project by utilizing Python to clean and organize the dataset, ensuring optimal data quality for analysis.
+I kick off the project by utilizing Python to clean and organize the dataset, ensuring optimal data quality for analysis.
 
 #### Handling Missing Data
 
-We employ various techniques to handle missing values, including forward-fill and mean imputation for specific columns such as "Genres," "Rating," and "Members."
+I employ various techniques to handle missing values, including forward-fill and mean imputation for specific columns such as "Genres," "Rating," and "Members."
 
 ### Analysis Steps
 
-Here's a glimpse of the key steps we undertake during the analysis:
+Here's a glimpse of the key steps I undertake during the analysis:
 
-- **Counting Null Values**: We leverage the `ISNULL()` method to identify and count null values in the dataset.
-- **Updating Rows**: Utilizing SQL `UPDATE` statements, we efficiently handle missing values by applying techniques like forward-fill for "Genres," mean imputation for "Rating," and forward-fill for "Members."
-- **Top Anime Titles**: Employing SQL `SELECT` and `ORDER BY` clauses, we rank and retrieve the top 10 anime titles based on their ratings.
-- **Total Anime Titles**: We use the SQL `COUNT` function to calculate and retrieve the total count of anime titles.
-- **Exporting to CSV**: Utilizing the `to_csv` method, we export the dataset to a CSV file, facilitating further analysis or data sharing.
+- **Counting Null Values**: I leverage the `ISNULL()` method to identify and count null values in the dataset.
+- **Updating Rows**: Utilizing SQL `UPDATE` statements, I efficiently handle missing values by applying techniques like forward-fill for "Genres," mean imputation for "Rating," and forward-fill for "Members."
+- **Top Anime Titles**: Employing SQL `SELECT` and `ORDER BY` clauses, I rank and retrieve the top 10 anime titles based on their ratings.
+- **Total Anime Titles**: I use the SQL `COUNT` function to calculate and retrieve the total count of anime titles.
+- **Exporting to CSV**: Utilizing the `to_csv` method, I export the dataset to a CSV file, facilitating further analysis or data sharing.
 
 ### Insights and Findings
 
@@ -41,4 +41,4 @@ Our analysis yields several noteworthy findings:
 
 For further reading, you can check out the original Medium article that inspired this project: [Analysis of Anime Ratings Dataset](https://medium.com/@krishnax16/analysis-of-anime-ratings-dataset-54cbde90f23d)
 
-Thank you for exploring the Analysis of Anime Recommendations Dataset project with us! We hope you find the insights valuable and informative.
+Thank you for exploring the Analysis of Anime Recommendations Dataset project with us! I hope you find the insights valuable and informative.
